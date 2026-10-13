@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050505" />
+      <stop offset="50%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="silverGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#a3a3a3" stop-opacity="0.4" />
+    </linearGradient>
+    <radialGradient id="spotlight" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="750" fill="url(#bg)" />
+  <rect width="600" height="750" fill="url(#spotlight)" />
+
+  <!-- Subtle Chess Grid Overlay -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
+    <line x1="75" y1="0" x2="75" y2="750" />
+    <line x1="150" y1="0" x2="150" y2="750" />
+    <line x1="225" y1="0" x2="225" y2="750" />
+    <line x1="300" y1="0" x2="300" y2="750" />
+    <line x1="375" y1="0" x2="375" y2="750" />
+    <line x1="450" y1="0" x2="450" y2="750" />
+    <line x1="525" y1="0" x2="525" y2="750" />
+    <line x1="0" y1="93" x2="600" y2="93" />
+    <line x1="0" y1="187" x2="600" y2="187" />
+    <line x1="0" y1="281" x2="600" y2="281" />
+    <line x1="0" y1="375" x2="600" y2="375" />
+    <line x1="0" y1="468" x2="600" y2="468" />
+    <line x1="0" y1="562" x2="600" y2="562" />
+    <line x1="0" y1="656" x2="600" y2="656" />
+  </g>
+
+  <!-- Elegant Inner Border -->
+  <rect x="20" y="20" width="560" height="710" fill="none" stroke="#262626" stroke-width="1" />
+  <rect x="28" y="28" width="544" height="694" fill="none" stroke="#141414" stroke-width="1" />
+
+  <!-- Corner Brackets -->
+  <path d="M 40 60 L 40 40 L 60 40" fill="none" stroke="#c4c4c4" stroke-width="1.5" opacity="0.6" />
+  <path d="M 560 60 L 560 40 L 540 40" fill="none" stroke="#c4c4c4" stroke-width="1.5" opacity="0.6" />
+  <path d="M 40 690 L 40 710 L 60 710" fill="none" stroke="#c4c4c4" stroke-width="1.5" opacity="0.6" />
+  <path d="M 560 690 L 560 710 L 540 710" fill="none" stroke="#c4c4c4" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Central Silhouette / Strategic King & Portrait Icon -->
+  <g transform="translate(300, 310)" text-anchor="middle">
+    <!-- Circular Halo -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#262626" stroke-width="1" />
+    <circle cx="0" cy="0" r="95" fill="#0d0d0d" stroke="#333333" stroke-width="1" />
+    
+    <!-- King Crown / Piece Monogram -->
+    <text y="-10" font-family="'Space Grotesk', serif" font-size="76" fill="url(#silverGlow)" opacity="0.9">♚</text>
+    
+    <text y="50" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="4" fill="#a3a3a3">OMAR EMAD AHMED</text>
+    <text y="68" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="2" fill="#666666">BIS STUDENT // PORTFOLIO</text>
+  </g>
+
+  <!-- Bottom Details -->
+  <g transform="translate(300, 620)" text-anchor="middle">
+    <rect x="-140" y="-18" width="280" height="36" rx="4" fill="#0f0f0f" stroke="#262626" stroke-width="1" />
+    <text y="4" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#c4c4c4">PERSONAL PHOTO PLACEHOLDER</text>
+    <text y="45" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#666666">Upload your photo as: public/images/omar-emad.jpg</text>
+  </g>
+</svg>
