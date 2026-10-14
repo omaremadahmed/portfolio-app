@@ -93,14 +93,14 @@ export default function DomainModal({ domain, onClose }: DomainModalProps) {
             <div style={{ display: 'flex', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
               {domain.relatedProjects.map((projId) => {
                 const namesEn: Record<string, string> = {
-                  'house-platform': 'House Platform',
-                  'next-mind-ai': 'Next Mind.AI',
+                  'house-economic': 'House Economic Platform',
+                  'house-academic': 'House Academic Platform',
                   'bezrah': 'Bezrah / Bazra',
                   'enterprise-platform': 'Enterprise Platform',
                 };
                 const namesAr: Record<string, string> = {
-                  'house-platform': 'منصة House Platform',
-                  'next-mind-ai': 'مشروع Next Mind.AI',
+                  'house-economic': 'منصة House الاقتصادية',
+                  'house-academic': 'منصة House الأكاديمية',
                   'bezrah': 'منصة بذرة (Bezrah)',
                   'enterprise-platform': 'منصة المؤسسات (Enterprise)',
                 };

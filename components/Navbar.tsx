@@ -7,6 +7,7 @@ import { translations } from '../data/translations';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
+  const [scrolled, setScrolled] = useState(false);
   const { lang, toggleLang, dir } = useLanguage();
   const t = translations[lang].nav;
 
@@ -23,6 +24,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
       const scrollPosition = window.scrollY + 140;
       for (let i = navItems.length - 1; i >= 0; i--) {
         const sectionId = navItems[i].href.substring(1);
@@ -41,11 +43,14 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="nav" role="banner" dir={dir}>
+    <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`} role="banner" dir={dir}>
       <div className="container nav__inner">
+        {/* Logo */}
         <a href="#about" className="nav__logo" aria-label="Omar Emad Ahmed Home">
-          <span style={{ marginInlineEnd: '6px', opacity: 0.9 }}>♚</span>
-          {lang === 'ar' ? 'عمر عماد أحمد' : 'OMAR EMAD AHMED'}
+          <span className="nav__logo-crown">👑</span>
+          <span className="nav__logo-text">
+            {lang === 'ar' ? 'عمر عماد أحمد' : 'OMAR EMAD AHMED'}
+          </span>
         </a>
 
         {/* Desktop Navigation */}
@@ -64,42 +69,30 @@ export default function Navbar() {
             );
           })}
 
-          {/* Language Switcher */}
+          {/* Single Language Switcher — Desktop Only */}
           <button
             type="button"
             className="lang-switcher-btn"
             onClick={toggleLang}
             aria-label={lang === 'en' ? 'Switch to Arabic' : 'التحويل إلى الإنجليزية'}
           >
-            <span>🌐</span>
+            <span className="lang-switcher-icon">🌐</span>
             <span>{lang === 'en' ? 'العربية' : 'EN'}</span>
           </button>
         </nav>
 
-        {/* Mobile Controls */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <button
-            type="button"
-            className="lang-switcher-btn"
-            onClick={toggleLang}
-            style={{ display: 'inline-flex' }}
-            aria-label="Toggle language"
-          >
-            <span>{lang === 'en' ? 'العربية' : 'EN'}</span>
-          </button>
-
-          <button
-            type="button"
-            className={`nav__toggle ${isOpen ? 'nav__toggle--open' : ''}`}
-            onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-label="Toggle navigation menu"
-          >
-            <span className="nav__toggle-bar" />
-            <span className="nav__toggle-bar" />
-            <span className="nav__toggle-bar" />
-          </button>
-        </div>
+        {/* Mobile: Hamburger Toggle Only (no duplicate lang button) */}
+        <button
+          type="button"
+          className={`nav__toggle ${isOpen ? 'nav__toggle--open' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation menu"
+        >
+          <span className="nav__toggle-bar" />
+          <span className="nav__toggle-bar" />
+          <span className="nav__toggle-bar" />
+        </button>
       </div>
 
       {/* Mobile Menu Drawer */}
@@ -108,7 +101,7 @@ export default function Navbar() {
         aria-hidden={!isOpen}
       >
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <span style={{ fontSize: '2.2rem', color: '#C4C4C4' }}>♚</span>
+          <span style={{ fontSize: '2.2rem' }}>👑</span>
           <div
             style={{
               fontSize: '0.85rem',
@@ -135,6 +128,21 @@ export default function Navbar() {
             {item.label}
           </a>
         ))}
+
+        {/* Language Switcher inside Mobile Menu */}
+        <button
+          type="button"
+          className="lang-switcher-btn"
+          onClick={() => {
+            toggleLang();
+            closeMenu();
+          }}
+          style={{ marginTop: '1.5rem' }}
+          aria-label={lang === 'en' ? 'Switch to Arabic' : 'التحويل إلى الإنجليزية'}
+        >
+          <span>🌐</span>
+          <span>{lang === 'en' ? 'العربية' : 'EN'}</span>
+        </button>
       </div>
     </header>
   );

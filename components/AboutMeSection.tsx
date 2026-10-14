@@ -206,7 +206,7 @@ export default function AboutMeSection() {
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ fontSize: '1rem', color: 'var(--silver)' }}>♚</span>
+                  <span style={{ fontSize: '1rem' }}>👑</span>
                   <div>
                     <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.8rem', fontWeight: 600, color: '#FFFFFF' }}>
                       {lang === 'ar' ? siteConfig.nameAr : siteConfig.name}

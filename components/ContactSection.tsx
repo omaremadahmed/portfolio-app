@@ -62,6 +62,44 @@ export default function ContactSection() {
             </h3>
 
             <div className="contact__links">
+              {/* Phone 1 */}
+              <div className="contact__link" style={{ justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
+                <a
+                  href={`tel:${siteConfig.links.phone1International}`}
+                  style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1, textDecoration: 'none', color: 'inherit' }}
+                  aria-label="Call Phone 1"
+                >
+                  <span className="contact__link-icon">📞</span>
+                  <div>
+                    <div className="contact__link-label">{lang === 'ar' ? 'الهاتف الرئيسي / واتساب' : 'Primary Phone / WhatsApp'}</div>
+                    <div className="contact__link-value" dir="ltr">{siteConfig.links.phone1}</div>
+                  </div>
+                </a>
+                <a
+                  href={`https://wa.me/201128674131`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn--secondary btn--small"
+                  style={{ padding: '4px 10px', fontSize: '0.72rem', alignSelf: 'center' }}
+                >
+                  WhatsApp
+                </a>
+              </div>
+
+              {/* Phone 2 */}
+              <a
+                href={`tel:${siteConfig.links.phone2International}`}
+                className="contact__link"
+                aria-label="Call Phone 2"
+              >
+                <span className="contact__link-icon">📱</span>
+                <div>
+                  <div className="contact__link-label">{lang === 'ar' ? 'هاتف ثانوي' : 'Secondary Phone'}</div>
+                  <div className="contact__link-value" dir="ltr">{siteConfig.links.phone2}</div>
+                </div>
+              </a>
+
+              {/* Email */}
               <a
                 href={`mailto:${siteConfig.links.email}`}
                 className="contact__link"
@@ -74,6 +112,7 @@ export default function ContactSection() {
                 </div>
               </a>
 
+              {/* GitHub */}
               <a
                 href={siteConfig.links.github}
                 target="_blank"
@@ -84,10 +123,11 @@ export default function ContactSection() {
                 <span className="contact__link-icon">⟨⟩</span>
                 <div>
                   <div className="contact__link-label">{t.sourceRepos}</div>
-                  <div className="contact__link-value">GitHub / OmarEmad</div>
+                  <div className="contact__link-value">github.com/{siteConfig.links.githubUsername}</div>
                 </div>
               </a>
 
+              {/* LinkedIn */}
               <a
                 href={siteConfig.links.linkedin}
                 target="_blank"
@@ -98,7 +138,7 @@ export default function ContactSection() {
                 <span className="contact__link-icon">in</span>
                 <div>
                   <div className="contact__link-label">{t.professionalNet}</div>
-                  <div className="contact__link-value">LinkedIn Profile</div>
+                  <div className="contact__link-value">linkedin.com/in/{siteConfig.links.linkedinName}</div>
                 </div>
               </a>
             </div>

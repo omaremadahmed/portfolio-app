@@ -368,9 +368,8 @@ button {
 }
 
 .hero__eyebrow::before {
-  content: '♔';
-  font-size: 0.8rem;
-  color: var(--silver);
+  content: '👑';
+  font-size: 0.85rem;
 }
 
 .hero__name {

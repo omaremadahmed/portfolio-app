@@ -24,7 +24,7 @@ export const domains: Domain[] = [
       'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Vue.js', 'Angular',
       'Next.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'Django', 'REST APIs', 'PostgreSQL'
     ],
-    relatedProjects: ['house-platform', 'next-mind-ai', 'bezrah', 'enterprise-platform'],
+    relatedProjects: ['house-economic', 'house-academic', 'bezrah', 'enterprise-platform'],
     relatedDomains: ['software-engineering', 'cloud-computing', 'uiux-design'],
   },
   {
@@ -56,7 +56,7 @@ export const domains: Domain[] = [
       'AWS', 'Microsoft Azure', 'Compute & Storage', 'Cloud Networking',
       'IAM (Identity & Access)', 'Cloud Architecture', 'Scalability & Deployment'
     ],
-    relatedProjects: ['next-mind-ai'],
+    relatedProjects: ['house-economic', 'enterprise-platform'],
     relatedDomains: ['devops', 'networking', 'it-systems'],
   },
   {
@@ -72,7 +72,7 @@ export const domains: Domain[] = [
       'Linux', 'Bash CLI', 'Git & GitHub', 'Docker', 'Containerization',
       'CI/CD Pipelines', 'Deployment Workflows', 'Infrastructure Basics'
     ],
-    relatedProjects: ['house-platform'],
+    relatedProjects: ['house-academic', 'enterprise-platform'],
     relatedDomains: ['cloud-computing', 'software-engineering', 'it-systems'],
   },
   {
@@ -120,7 +120,7 @@ export const domains: Domain[] = [
       'Data Structures & Algorithms', 'OOP', 'SOLID Principles',
       'Design Patterns', 'System Design Basics', 'Clean Code', 'Testing & Debugging'
     ],
-    relatedProjects: ['house-platform', 'enterprise-platform'],
+    relatedProjects: ['house-economic', 'house-academic', 'enterprise-platform'],
     relatedDomains: ['web-development', 'devops', 'mobile-app-development'],
   },
   {
@@ -152,7 +152,7 @@ export const domains: Domain[] = [
       'Figma', 'User Research Basics', 'Wireframing', 'Interactive Prototyping',
       'Design Systems', 'Typography & Contrast', 'Accessibility (WCAG)'
     ],
-    relatedProjects: ['bezrah', 'house-platform'],
+    relatedProjects: ['bezrah', 'house-academic'],
     relatedDomains: ['web-development', 'mobile-app-development', 'software-engineering'],
   },
 ];

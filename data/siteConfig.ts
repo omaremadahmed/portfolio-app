@@ -8,13 +8,19 @@ export const siteConfig = {
   descriptionAr:
     'الملف التقني الاستراتيجي لعمر عماد أحمد، طالب نظم معلومات الأعمال (BIS)، يشمل تسعة مجالات متوازية وكورسات CS50 من جامعة هارفارد.',
   ogImage: '/og-image.png',
-  url: '', // Set when domain is known
-  photoPath: '/images/omar-emad.jpg', // Place your photo here
+  url: '',
+  photoPath: '/images/omar-emad.jpg',
   photoPlaceholder: '/images/omar-emad-placeholder.svg',
   links: {
-    email: 'placeholder@email.com', // Replace with actual email
-    github: 'https://github.com/', // Replace with actual GitHub URL
-    linkedin: 'https://linkedin.com/in/', // Replace with actual LinkedIn URL
+    email: 'omargls600@gmail.com',
+    github: 'https://github.com/omaremadahmed',
+    githubUsername: 'omaremadahmed',
+    linkedin: 'https://www.linkedin.com/in/omar-emad-90b242401?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    linkedinName: 'Omar Emad',
+    phone1: '01128674131',
+    phone1International: '+201128674131',
+    phone2: '010445808862',
+    phone2International: '+2010445808862',
   },
 };
 
