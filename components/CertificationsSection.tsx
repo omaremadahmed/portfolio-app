@@ -32,7 +32,7 @@ export default function CertificationsSection() {
               <article key={course.id} className="cert-card" role="listitem">
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
                   <div className="cert-card__code">
-                    <span>♟</span>
+                    <span>📜</span>
                     <span>{course.code}</span>
                   </div>
 

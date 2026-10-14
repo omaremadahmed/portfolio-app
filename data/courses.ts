@@ -18,6 +18,40 @@ export interface Course {
 
 export const cs50Courses: Course[] = [
   {
+    id: 'icdl-real-soft-house',
+    code: 'ICDL',
+    titleEn: 'ICDL — International Computer Driving Licence',
+    titleAr: 'ICDL — رخصة قيادة الحاسوب الدولية',
+    provider: 'Real Soft House',
+    platform: 'Real Soft House Testing & Training Center',
+    descriptionEn:
+      'Recognized certification validating comprehensive IT competency: computer systems, office applications, data management, and digital collaboration.',
+    descriptionAr:
+      'شهادة معتمدة تؤكد الكفاءة الرقمية الشاملة: أنظمة الحاسوب، التطبيقات المكتبية، معالجة البيانات، والتعامل الآمن مع الإنترنت وأدوات العمل الرقمي.',
+    topicsEn: [
+      'Computer Essentials & Windows',
+      'Word Processing (MS Word)',
+      'Spreadsheets (MS Excel)',
+      'Presentations (MS PowerPoint)',
+      'Databases (MS Access)',
+      'Online Essentials & Collaboration',
+      'Cyber Security & Digital Safety',
+    ],
+    topicsAr: [
+      'أساسيات الحاسوب ونظام Windows',
+      'معالجة النصوص (MS Word)',
+      'الجداول الإلكترونية (MS Excel)',
+      'العروض التقديمية (MS PowerPoint)',
+      'مفاهيم قواعد البيانات (MS Access)',
+      'أساسيات الإنترنت والعمل الجماعي',
+      'الأمن الرقمي والسلامة المعلوماتية',
+    ],
+    statusEn: 'Certified & Verified',
+    statusAr: 'شهادة معتمدة ومجتازة بنجاح',
+    certificateStatusEn: 'Official Certification Verified',
+    certificateStatusAr: 'شهادة رسمية معتمدة',
+  },
+  {
     id: 'cs50x',
     code: 'CS50x',
     titleEn: 'CS50x — Introduction to Computer Science',
