@@ -70,6 +70,10 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -91,6 +95,9 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
 }
 
 a {
@@ -844,10 +851,10 @@ button {
 
 @media (max-width: 768px) {
   .hero__chessboard {
-    right: -20%;
-    width: 400px;
-    height: 400px;
-    opacity: 0.06;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.04;
   }
 }
 

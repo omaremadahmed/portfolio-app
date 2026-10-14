@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div style={{ backgroundColor: '#000000', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ backgroundColor: '#000000', minHeight: '100vh', display: 'flex', flexDirection: 'column', overflowX: 'hidden', width: '100%', maxWidth: '100vw' }}>
       <Navbar />
       <main id="main-content" style={{ flex: 1, backgroundColor: '#000000' }}>
         {/* 1. About Me (Top - personal photo, BIS student intro, and professional summary) */}

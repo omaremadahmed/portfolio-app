@@ -44,6 +44,8 @@ export const viewport: Viewport = {
   themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
@@ -53,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body style={{ backgroundColor: "#000000", color: "#FFFFFF", minHeight: "100vh" }}>
+      <body style={{ backgroundColor: "#000000", color: "#FFFFFF", minHeight: "100vh", overflowX: "hidden", width: "100%" }}>
         <LanguageProvider>
           {children}
         </LanguageProvider>
