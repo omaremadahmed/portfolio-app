@@ -44,7 +44,7 @@ export default function Navbar() {
 
   return (
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`} role="banner" dir={dir}>
-      <div className="container nav__inner">
+      <div className="nav__inner">
         {/* Logo */}
         <a href="#about" className="nav__logo" aria-label="Omar Emad Ahmed Home">
           <span className="nav__logo-crown">👑</span>
